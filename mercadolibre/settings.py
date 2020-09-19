@@ -25,7 +25,7 @@ SECRET_KEY = '4hhj4eyc-29uw9_=b%#ewoxdv)8w31-a0jus5_@7p=udska(ad'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["a04262d3e889.ngrok.io"]
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'clientes'
 ]
 
 MIDDLEWARE = [
@@ -106,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -119,3 +121,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+import os
+
+MERCADOLIBRE_AUTH_URL = os.environ.get("MERCADOLIBRE_AUTH_URL", "https://api.mercadolibre.com/oauth/token")
+MERCADOLIBRE_CLIENT = os.environ.get("MERCADOLIBRE_CLIENT", "3625436828982588")
+MERCADOLIBRE_CLIENT_SECRET = os.environ.get("MERCADOLIBRE_CLIENT_SECRET", "8t44ie14Bvv514XW7JZvbmO1IN8rWs6M")
+MERCADOLIBRE_REDIRECT_URI = os.environ.get("MERCADOLIBRE_REDIRECT_URI",
+                                           "https%3A//a04262d3e889.ngrok.io/clients/registration/")
