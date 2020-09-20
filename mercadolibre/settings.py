@@ -25,7 +25,7 @@ SECRET_KEY = '4hhj4eyc-29uw9_=b%#ewoxdv)8w31-a0jus5_@7p=udska(ad'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["a04262d3e889.ngrok.io"]
+ALLOWED_HOSTS = ["f0a387281df3.ngrok.io", "127.0.0.1"]
 
 
 # Application definition
@@ -114,7 +114,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -128,4 +128,4 @@ MERCADOLIBRE_AUTH_URL = os.environ.get("MERCADOLIBRE_AUTH_URL", "https://api.mer
 MERCADOLIBRE_CLIENT = os.environ.get("MERCADOLIBRE_CLIENT", "3625436828982588")
 MERCADOLIBRE_CLIENT_SECRET = os.environ.get("MERCADOLIBRE_CLIENT_SECRET", "8t44ie14Bvv514XW7JZvbmO1IN8rWs6M")
 MERCADOLIBRE_REDIRECT_URI = os.environ.get("MERCADOLIBRE_REDIRECT_URI",
-                                           "https%3A//a04262d3e889.ngrok.io/clients/registration/")
+                                           "https%3A//f0a387281df3.ngrok.io/clients/registration/")

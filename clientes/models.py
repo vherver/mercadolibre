@@ -14,7 +14,7 @@ class Client(models.Model, ):
     """
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    created_at = models.DateField(default=timezone.now)
+    created_at = models.DateTimeField(default=timezone.now)
     updated_at = AutoDateTimeField(default=timezone.now)
     code = models.CharField(max_length=256, blank=False, null=False)
     access_token = models.CharField(max_length=256)
